@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Image from "../Images/download (1).jpeg";
+import Display from "../Images/Display.png";
 function BikeCard({ bike }) {
     const cardStyle = {
         border: '1px solid #ddd',
@@ -38,6 +39,7 @@ function BikeCard({ bike }) {
     };
 
     return (
+
         // Wrap the card with Link to make it clickable
         <Link to={`/bike/${bike.bikeID}`} style={{ textDecoration: 'none' }}>
             <div style={cardStyle}>
@@ -101,6 +103,20 @@ export default function BikeList() {
 
     return (
         <div style={containerStyle}>
+            <div
+                style={{
+                    position: 'fixed',
+                    right: '10px',
+                    top: '10px',
+                    width: '100%',
+                    height: '100%',
+                    backgroundImage: `url(${Display})`,
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    zIndex: "-10"
+                }}
+            ></div>
             <h1 style={{ textAlign: 'center', marginBottom: '24px' }}>Available Bikes</h1>
             {bikes.filter(bike => bike.available).map((bike) => (
                 <BikeCard key={bike.bikeID} id={bike.bikeID} bike={bike} />
