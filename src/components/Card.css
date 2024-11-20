@@ -1,0 +1,67 @@
+.bike-card {
+    display: flex;
+    flex-direction: column;
+    /* Arrange items in a column */
+    align-items: center;
+    /* Center align the items horizontally */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 40vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    text-align: center;
+    /* Center the text content */
+}
+
+.bike-card-image img {
+    width: 100%;
+    /* Ensure the image fills the container */
+    height: 200px;
+    /* Set a fixed height for the image */
+    object-fit: cover;
+    /* Make sure the image maintains aspect ratio */
+    border-radius: 8px 8px 0 0;
+    /* Rounded top corners */
+}
+
+.bike-card-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Center text within the container */
+    width: 100%;
+}
+
+.bike-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.bike-location,
+.bike-model,
+.bike-year {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.bike-details-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 12px;
+    align-self: flex-start;
+}
+
+.bike-details-button:hover {
+    background-color: #0056b3;
+}
